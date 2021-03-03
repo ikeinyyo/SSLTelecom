@@ -31,3 +31,23 @@ Hemos adjuntado el fichero con los datos que tenemos disponibles actualmente. Si
 - **Touch_screen**: indica si la pantalla del móvil es táctil (1) o no (0)
 - **WiFi**: indica si el móvil tiene WiFi (1) o no (0)
 - **Price-range**: indica si el móvil es de costo bajo (0), medio (1), alto (2) o muy alto (3)
+
+## Conda
+
+Para crear el entorno de conda a partir del fichero de `environment.yml`, hay que ejecutar el siguiente comando:
+
+```sh
+conda env create -f environment.yml
+```
+
+Para activar el entorno, una vez creado, hay que ejecutar el siguiente comando:
+
+```sh
+conda activate telecom
+```
+
+Por último, para añadir el entorno de conda como Kernel en Jupyter, hhay que ejecutar el siguiente comando:
+
+```sh
+python -m ipykernel install --user --name telecom --display-name "Python (telecom)"
+```
