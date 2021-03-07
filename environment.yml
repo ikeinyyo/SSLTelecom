@@ -12,3 +12,5 @@ dependencies:
       - sklearn==0.0
       - empiricaldist==0.6.0
       - seaborn==0.11.1
+      - azureml==0.2.7
+      - azureml-core==1.24.0
