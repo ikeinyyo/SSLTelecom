@@ -8,6 +8,7 @@ from sklearn.svm import SVC
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import joblib
@@ -118,6 +119,10 @@ def log_metrics(run, svm, data_pipeline, X, y):
             y, y_predicted, average='macro'),
     }
     [run.log(key, value) for (key, value) in metrics.items()]
+
+    plot_confusion_matrix(svm, X, y)
+    run.log_image(name='confusion_matrix', plot=plt)
+
     return metrics
 
 
@@ -130,6 +135,9 @@ class DummyRun:
 
     def tag(self, name, value):
         print(f"[TAG] {name}: {value}")
+
+    def log_image(self, name, plot):
+        print("[LOG IMAGE] {name}: {plot}")
 
     def log(self, name, value):
         print(f"[LOG] {name}: {value}")
