@@ -14,3 +14,8 @@ dependencies:
       - seaborn==0.11.1
       - azureml==0.2.7
       - azureml-core==1.24.0
+      - azureml-dataset-runtime==1.24.0
+      - python-dotenv==0.15.0
+      - azureml-widgets==1.24.0
+      - azureml-pipeline==1.24.0
+      - azureml-sdk==1.24.0
