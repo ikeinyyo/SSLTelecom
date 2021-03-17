@@ -1,0 +1,11 @@
+# https://docs.pylint.org/en/1.6.0/features.html
+[MASTER]
+disable=
+    import-error, 
+    no-name-in-module, 
+    missing-module-docstring,
+    missing-function-docstring, 
+    missing-class-docstring, 
+    global-variable-undefined
+
+good-names=ws,y,X,df,X_test,X_train,X_validation,C,X_train_prepared,X_test_prepared
